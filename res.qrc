@@ -1,0 +1,43 @@
+<RCC>
+    <qresource prefix="/">
+        <file>windowsVista.png</file>
+        <file>us.png</file>
+        <file>up.png</file>
+        <file>style.png</file>
+        <file>stop.png</file>
+        <file>sounded.png</file>
+        <file>settings.png</file>
+        <file>savePlayList.png</file>
+        <file>ru.png</file>
+        <file>repeat.png</file>
+        <file>quit.png</file>
+        <file>previous.png</file>
+        <file>playlist.png</file>
+        <file>play.png</file>
+        <file>pause.png</file>
+        <file>openPlayList.png</file>
+        <file>open.png</file>
+        <file>next.png</file>
+        <file>mx.png</file>
+        <file>muted.png</file>
+        <file>mediafile.png</file>
+        <file>manual.png</file>
+        <file>manicon.png</file>
+        <file>lang.png</file>
+        <file>jp.png</file>
+        <file>it.png</file>
+        <file>ge.png</file>
+        <file>fusion.png</file>
+        <file>fullscreen.png</file>
+        <file>fr.png</file>
+        <file>duartecorporation.png</file>
+        <file>down.png</file>
+        <file>delete.png</file>
+        <file>cn.png</file>
+        <file>br.png</file>
+        <file>accept.png</file>
+    </qresource>
+    <qresource prefix="/lang">
+        <file>en.qm</file>
+    </qresource>
+</RCC>

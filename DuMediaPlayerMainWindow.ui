@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>685</width>
+    <height>423</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>DuMediaPlayer</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="res.qrc">
+    <normaloff>:/manicon.png</normaloff>:/manicon.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_2"/>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>685</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuArchivo">
+    <property name="title">
+     <string>Archivo</string>
+    </property>
+    <addaction name="actionAbrir"/>
+    <addaction name="separator"/>
+    <addaction name="actionAbrirListaReproduccion"/>
+    <addaction name="actionGuardarListaReproduccion"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuitar"/>
+   </widget>
+   <widget class="QMenu" name="menuReproducir">
+    <property name="title">
+     <string>Reproducir</string>
+    </property>
+    <addaction name="actionReproducir"/>
+    <addaction name="actionPausar"/>
+    <addaction name="actionDetener"/>
+    <addaction name="separator"/>
+    <addaction name="actionSiguiente"/>
+    <addaction name="actionAnterior"/>
+    <addaction name="separator"/>
+    <addaction name="actionRepetir"/>
+   </widget>
+   <widget class="QMenu" name="menuVer">
+    <property name="title">
+     <string>Ver</string>
+    </property>
+    <addaction name="actionPlayList"/>
+    <addaction name="actionPantalla_completa"/>
+   </widget>
+   <widget class="QMenu" name="menuHerramientas">
+    <property name="title">
+     <string>Herramientas</string>
+    </property>
+    <addaction name="actionPreferencias"/>
+   </widget>
+   <widget class="QMenu" name="menuAyuda">
+    <property name="title">
+     <string>Ayuda</string>
+    </property>
+    <addaction name="actionAcerca_de_DuMediaPlayer"/>
+    <addaction name="actionAcerca_de_DuarteCorporation"/>
+    <addaction name="actionManual_de_DuMediaPlayer"/>
+   </widget>
+   <addaction name="menuArchivo"/>
+   <addaction name="menuReproducir"/>
+   <addaction name="menuVer"/>
+   <addaction name="menuHerramientas"/>
+   <addaction name="menuAyuda"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="windowTitle">
+    <string>Reproducción</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>BottomToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionAbrir"/>
+   <addaction name="separator"/>
+   <addaction name="actionReproducir"/>
+   <addaction name="actionPausar"/>
+   <addaction name="actionDetener"/>
+   <addaction name="separator"/>
+   <addaction name="actionAnterior"/>
+   <addaction name="actionSiguiente"/>
+   <addaction name="separator"/>
+   <addaction name="actionRepetir"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QDockWidget" name="dockWidget">
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="DuarteCorporation::DuMediaPlayerListWidget" name="listWidget">
+       <property name="contextMenuPolicy">
+        <enum>Qt::ActionsContextMenu</enum>
+       </property>
+       <property name="acceptDrops">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionAbrir">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/open.png</normaloff>:/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Abrir</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionQuitar">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/quit.png</normaloff>:/quit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Quitar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionReproducir">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/play.png</normaloff>:/play.png</iconset>
+   </property>
+   <property name="text">
+    <string>Reproducir</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="actionPausar">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/pause.png</normaloff>:/pause.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pausar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+P</string>
+   </property>
+  </action>
+  <action name="actionDetener">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/stop.png</normaloff>:/stop.png</iconset>
+   </property>
+   <property name="text">
+    <string>Detener</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionSiguiente">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/next.png</normaloff>:/next.png</iconset>
+   </property>
+   <property name="text">
+    <string>Siguiente</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionAnterior">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/previous.png</normaloff>:/previous.png</iconset>
+   </property>
+   <property name="text">
+    <string>Anterior</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+P</string>
+   </property>
+  </action>
+  <action name="actionRepetir">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/repeat.png</normaloff>:/repeat.png</iconset>
+   </property>
+   <property name="text">
+    <string>Repetir</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="actionPlayList">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/playlist.png</normaloff>:/playlist.png</iconset>
+   </property>
+   <property name="text">
+    <string>Lista de reproducción</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+P</string>
+   </property>
+  </action>
+  <action name="actionPantalla_completa">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/fullscreen.png</normaloff>:/fullscreen.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pantalla completa</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+Return</string>
+   </property>
+  </action>
+  <action name="actionPreferencias">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/settings.png</normaloff>:/settings.png</iconset>
+   </property>
+   <property name="text">
+    <string>Preferencias</string>
+   </property>
+  </action>
+  <action name="actionAcerca_de_DuMediaPlayer">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/manicon.png</normaloff>:/manicon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Acerca de DuMediaPlayer</string>
+   </property>
+  </action>
+  <action name="actionAcerca_de_DuarteCorporation">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/duartecorporation.png</normaloff>:/duartecorporation.png</iconset>
+   </property>
+   <property name="text">
+    <string>Acerca de DuarteCorporation</string>
+   </property>
+  </action>
+  <action name="actionManual_de_DuMediaPlayer">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/manual.png</normaloff>:/manual.png</iconset>
+   </property>
+   <property name="text">
+    <string>Manual de DuMediaPlayer</string>
+   </property>
+  </action>
+  <action name="actionGuardarListaReproduccion">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/savePlayList.png</normaloff>:/savePlayList.png</iconset>
+   </property>
+   <property name="text">
+    <string>Guardar lista de reproducción</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionAbrirListaReproduccion">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/openPlayList.png</normaloff>:/openPlayList.png</iconset>
+   </property>
+   <property name="text">
+    <string>Abrir lista de reproducción</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+O</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>DuarteCorporation::DuMediaPlayerListWidget</class>
+   <extends>QListWidget</extends>
+   <header location="global">DuMediaPlayerListWidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>
